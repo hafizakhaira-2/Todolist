@@ -1,0 +1,24 @@
+{
+  "appName": "To-Do List Our Routine",
+  "version": "1.0.0",
+  "storage": "localStorage",
+  "deployment": "GitHub Pages",
+  "theme": {
+    "base": "red-black",
+    "style": "modern-minimal",
+    "responsive": true,
+    "fluid": true
+  },
+  "features": [
+    "Tambah, centang, dan hapus task",
+    "Kategori Personal/Work/Study/Health",
+    "Prioritas Low/Medium/High",
+    "Filter All/Active/Done/High priority",
+    "Daily progress",
+    "Clear completed",
+    "Focus mode",
+    "Light/dark theme",
+    "Local persistence tanpa database",
+    "Responsive mobile-first"
+  ]
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0d">
+  <meta name="description" content="To-Do List Our Routine — personal routine planner yang modern, minimalis, dan offline-friendly.">
+  <title>To-Do List Our Routine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-glow glow-1"></div><div class="bg-glow glow-2"></div>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">✓</div>
+        <div><strong>Our Routine</strong><span>To-Do List</span></div>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" id="focusBtn" title="Focus mode">◉</button>
+        <button class="icon-btn" id="themeBtn" title="Ganti tema">◐</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow">YOUR DAY • YOUR RULES</div>
+        <h1>Make today<br><em>count.</em></h1>
+        <p>Atur tugas, kebiasaan, dan rutinitasmu tanpa ribet. Cepat, clean, dan tetap terasa personal.</p>
+      </div>
+      <div class="date-card">
+        <span id="dayName">—</span>
+        <strong id="todayDate">—</strong>
+        <small id="progressText">0% selesai</small>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><span>Semua</span><strong id="allCount">0</strong></div>
+      <div class="stat"><span>Aktif</span><strong id="activeCount">0</strong></div>
+      <div class="stat"><span>Selesai</span><strong id="doneCount">0</strong></div>
+      <div class="progress-card"><div class="progress-head"><span>Daily progress</span><strong id="progressPercent">0%</strong></div><div class="bar"><i id="progressBar"></i></div></div>
+    </section>
+
+    <section class="composer">
+      <input id="taskInput" type="text" maxlength="120" placeholder="Apa yang ingin kamu selesaikan hari ini?" autocomplete="off">
+      <select id="categoryInput" aria-label="Kategori">
+        <option value="Personal">Personal</option><option value="Work">Work</option><option value="Study">Study</option><option value="Health">Health</option>
+      </select>
+      <select id="priorityInput" aria-label="Prioritas">
+        <option value="low">Low</option><option value="medium" selected>Medium</option><option value="high">High</option>
+      </select>
+      <button id="addBtn" class="add-btn">+ Add task</button>
+    </section>
+
+    <nav class="filters" aria-label="Filter tugas">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">Active</button>
+      <button class="filter" data-filter="done">Done</button>
+      <button class="filter" data-filter="high">High priority</button>
+    </nav>
+
+    <main>
+      <div class="list-head"><h2 id="listTitle">Today's tasks</h2><button id="clearDone">Clear completed</button></div>
+      <div id="taskList" class="task-list"></div>
+      <div id="emptyState" class="empty">
+        <div class="empty-icon">✦</div>
+        <h3>Belum ada task.</h3>
+        <p>Tambahkan satu hal kecil yang ingin kamu bereskan hari ini.</p>
+      </div>
+    </main>
+
+    <footer><span>Our Routine · Built for your everyday.</span><span>Auto-saved locally</span></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
